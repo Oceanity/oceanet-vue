@@ -1,8 +1,33 @@
 <template>
     <div id="sound-commands">
-        <div v-for="category in categories" :key="category">
+        <h1>Stream Sound Commands</h1>
+        <div class="contents">
+            <ul>
+                <li v-for="category in categories" :key="category">
+                    <ul>
+                        <a
+                            :href="'#' + category.title.replace(/\W/gi, '-')"
+                            @click="jumpToEntry($event, category)"
+                        >
+                            {{ category.title }}
+                        </a>
+                        <li v-for="entry in category.entries" :key="entry">
+                            <a
+                                :href="'#' + entry.title.replace(/\W/gi, '-')"
+                                @click="jumpToEntry($event, entry)"
+                            >
+                                {{ entry.title }}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="commands" v-for="category in categories" :key="category">
+            <a :name="category.title.replace(/[^\w\d]/gi, '-')" />
             <h2>{{ category.title }}</h2>
             <div class="entry" v-for="entry in category.entries" :key="entry">
+                <a :name="entry.title.replace(/[^\w\d]/gi, '-')" />
                 <h3>{{ entry.title }}</h3>
                 <button @click="toggleEntry(entry)">
                     <span v-if="!entry.isCollapsed">-</span>
@@ -43,6 +68,16 @@ export default {
         toggleEntry(entry) {
             entry.isCollapsed = !entry.isCollapsed;
         },
+        jumpToEntry(e, item) {
+            e.preventDefault();
+            let tag = document.querySelector(
+                `a[name=${item.title.replace(/[^\w\d]/gi, "-")}]`
+            );
+            window.scrollTo(
+                window.scrollX,
+                tag.getBoundingClientRect().top - 120
+            );
+        },
     },
     mounted() {
         document.title = "Stream Sound Effects";
@@ -56,6 +91,10 @@ export default {
     position: relative;
     z-index: 2;
     padding: 20px;
+}
+
+#sound-commands a[name] {
+    margin-top: -100px;
 }
 
 #sound-commands h3 {
@@ -73,12 +112,39 @@ export default {
     box-shadow: 1px 1px 2px #000;
 }
 
-#sound-commands ul {
+#sound-commands .contents {
+    margin: 0 0 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: 10px solid rgba(0, 0, 50, 0.1);
+    max-width: 400px;
+    background: rgba(0, 0, 50, 0.3);
+}
+#sound-commands .contents ul {
+    margin: 0;
+    padding: 0;
+}
+#sound-commands .contents ul ul li {
+    margin-left: 20px;
+    list-style-type: square;
+    font-weight: normal;
+}
+#sound-commands .contents li {
+    line-height: 30px;
+    list-style-type: none;
+    font-weight: bold;
+}
+#sound-commands .contents a {
+    text-decoration: none;
+    color: #e3ebae;
+}
+
+#sound-commands .commands ul {
     margin: 0;
     padding: 4px 0;
     background: rgba(0, 0, 50, 0.3);
 }
-#sound-commands li {
+#sound-commands .commands li {
     display: flex;
     flex-wrap: wrap;
     padding: 4px;
