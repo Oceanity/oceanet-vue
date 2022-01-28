@@ -2,6 +2,7 @@
     <div id="sound-commands">
         <h1>Stream Sound Commands</h1>
         <div class="contents">
+            <h3>Table of Contents</h3>
             <ul>
                 <li v-for="category in categories" :key="category">
                     <ul>
@@ -35,7 +36,9 @@
                 </button>
                 <ul v-show="!entry.isCollapsed">
                     <li v-for="command in entry.commands" :key="command">
-                        <pre>{{ formatText(command)[0] }}</pre>
+                        <pre @click="copyCommand(formatText(command)[0])">{{
+                            formatText(command)[0]
+                        }}</pre>
                         <span
                             class="command-text"
                             v-html="formatText(command)[1]"
@@ -77,6 +80,10 @@ export default {
                 window.scrollX,
                 tag.getBoundingClientRect().top - 120
             );
+            if (!item.entries && item.isCollapsed) item.isCollapsed = false;
+        },
+        copyCommand(text) {
+            navigator.clipboard.writeText(text);
         },
     },
     mounted() {
@@ -98,31 +105,30 @@ export default {
 }
 
 #sound-commands h3 {
-    margin: 20px 0 0;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 7px 10px;
     position: relative;
-}
-#sound-commands h3:after {
-    content: "";
-    display: block;
-    top: 100%;
-    left: 0;
-    margin-top: 4px;
-    width: 100%;
-    border-bottom: 3px solid #fff;
-    box-shadow: 1px 1px 2px #000;
+    font-size: 18px;
+    background: rgba(0, 0, 50, 0.7);
 }
 
 #sound-commands .contents {
-    margin: 0 0 40px;
-    padding: 10px;
+    margin: 0 0 30px;
     border-radius: 10px;
     border-bottom: 10px solid rgba(0, 0, 50, 0.1);
     max-width: 400px;
-    background: rgba(0, 0, 50, 0.3);
+    background: rgba(0, 0, 50, 0.4);
+}
+#sound-commands .contents h3 {
+    background: rgba(0, 0, 50, 0.5);
 }
 #sound-commands .contents ul {
     margin: 0;
     padding: 0;
+}
+#sound-commands .contents > ul {
+    padding: 10px;
 }
 #sound-commands .contents ul ul li {
     margin-left: 20px;
@@ -142,7 +148,7 @@ export default {
 #sound-commands .commands ul {
     margin: 0;
     padding: 4px 0;
-    background: rgba(0, 0, 50, 0.3);
+    background: rgba(0, 0, 50, 0.4);
 }
 #sound-commands .commands li {
     display: flex;
@@ -153,6 +159,9 @@ export default {
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow: none;
+}
+#sound-commands .commands li:nth-of-type(even) {
+    background: rgba(0, 0, 50, 0.05);
 }
 #sound-commands .command-text span {
     margin-right: 2px;
@@ -172,19 +181,23 @@ export default {
     font-weight: 500;
     letter-spacing: 0;
     color: aqua;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 50, 0.7);
     cursor: pointer;
+}
+#sound-commands pre:hover {
+    background: rgba(50, 50, 100, 0.7);
 }
 #sound-commands .entry {
     position: relative;
-    margin: 0 0 40px;
-    border-bottom: 10px solid rgba(0, 0, 50, 0.4);
+    margin: 0 0 30px;
+    border-bottom: 10px solid rgba(0, 0, 50, 0.5);
     border-radius: 0 0 10px 10px;
 }
 #sound-commands .entry button {
     position: absolute;
     top: 0;
     right: 0;
+    margin: 7px 5px;
     width: 20px;
     height: 20px;
     line-height: 20px;
@@ -197,5 +210,19 @@ export default {
     background: #fff;
     user-select: none;
     cursor: pointer;
+}
+
+@media screen and (max-width: 560px) {
+    #sound-commands .commands li {
+        padding: 10px;
+        flex-direction: column;
+    }
+    #sound-commands pre {
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+        flex: 0;
+        font-size: 18px;
+    }
 }
 </style>

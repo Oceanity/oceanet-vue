@@ -73,6 +73,43 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "TV / Movies",
+            "entries": [{
+                    "title": "Eric Andre Show",
+                    "commands": [
+                        "!birdup [Eric] \"BIRD UP!\"",
+                        "!snaildown [Hannibal] \"SNAIL DOWN!\""
+                    ]
+                },
+                {
+                    "title": "Gregory Horror Show",
+                    "commands": [
+                        "!judgement [Judgement Boy] \"JUDGEMENT! NOW!\"",
+                        "!judgementboy [Judgement Boy] \"Do you know, who I am? They call me Judgement Boy. Do you know...\"",
+                        "!yourchoice [Judgement Boy] \"It was your choice, you have to live with it.\""
+                    ]
+                },
+                {
+                    "title": "Kung Fu Panda",
+                    "commands": [
+                        "!monke [Oogway] \"Mmmmmmm, monke.\""
+                    ]
+                },
+                {
+                    "title": "Max Magician and the Legend of the Rings",
+                    "commands": [
+                        "!hawk [Shira the Hawk] \"AAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+                    ]
+                },
+                {
+                    "title": "ReBoot",
+                    "commands": [
+                        "!what [Offscreen Chef] \"WHAT?!\""
+                    ]
+                }
+            ]
         }
     ]
 }
