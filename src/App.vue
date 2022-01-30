@@ -1,23 +1,62 @@
 <template>
-    <Header />
-    <main>
-        <SoundFiles />
-    </main>
-    <Backdrop />
+  <Header />
+  <main>
+    <router-view />
+  </main>
+  <Backdrop />
 </template>
 
 <script>
+import "./assets/global.scss";
 import Header from "./components/Header.vue";
-import SoundFiles from "./components/SoundFiles.vue";
 import Backdrop from "./components/Backdrop.vue";
-import "./assets/global.css";
 
 export default {
-    name: "App",
-    components: {
-        Header,
-        SoundFiles,
-        Backdrop,
-    },
+  setup() {},
+  provide() {
+    return {
+      scrollToTop() {
+        animScrollTo(0, 500);
+      },
+    };
+  },
+  components: {
+    Header,
+    Backdrop,
+  },
 };
+
+// Animate scrollTo
+function animScrollTo(y, duration) {
+  // Grab current position and time and calculate length
+  var curY = window.scrollY,
+    baseY = (curY + y) * 0.5,
+    difference = curY - baseY,
+    startTime = performance.now();
+
+  // Scroll time elapsed / duration each step
+  function step() {
+    var normalizedTime = (performance.now() - startTime) / duration;
+    if (normalizedTime > 1) normalizedTime = 1;
+
+    window.scrollTo(0, baseY + difference * Math.cos(normalizedTime * Math.PI));
+    if (normalizedTime < 1) window.requestAnimationFrame(step);
+  }
+  window.requestAnimationFrame(step);
+}
 </script>
+
+<style lang="scss">
+main {
+  position: relative;
+  padding: 120px 20px 20px;
+  z-index: 2;
+  transition: padding 0.1s linear;
+}
+
+@media screen and (max-width: 640px) {
+  main {
+    padding: 70px 20px 20px;
+  }
+}
+</style>

@@ -1,0 +1,115 @@
+{
+  "categories": [{
+      "title": "Zelda",
+      "entries": [{
+          "title": "Legend of Zelda: Animated Series, The",
+          "commands": [
+            "!excuseme [Link] \"Well excuuuuuuuuuuuuse me, Princess!\"",
+            "!smoochingtime [Link] \"OH BOY! SMOOCHING TIME!\"",
+            "!skelescream [Skeleton] \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\""
+          ]
+        },
+        {
+          "title": "Legend of Zelda: Faces of Evil, The",
+          "commands": [
+            "!morshu [Morshu] \"Lamp Oil? Rope? Bombs? You want it? It's yours my friend, as long as you have enough rupees.\"",
+            "!morshu2 [Morshu] \"Sorry Link, I can't give credit. Maybe come back when you're a little mmmmmmmm richer.\"",
+            "!die [Ganon] \"DIE!\""
+          ]
+        },
+        {
+          "title": "Legend of Zelda: Majora's Mask, The",
+          "commands": [
+            "!yah [Postman] \"Yah.\"",
+            "!yay [Toilet Hand] \"YAY!\""
+          ]
+        },
+        {
+          "title": "Legend of Zelda: Wand of Gamelon, The",
+          "commands": [
+            "!good [Hectan] \"You've killllllled meeeeeeee\" [Zelda] \"GOOD!\"",
+            "!illegal [Duke Oncled] \"This is illegal, you know!\""
+          ]
+        },
+        {
+          "title": "Legend of Zelda: Wind Waker, The",
+          "commands": [
+            "!bye [Beedle] \"Byyyyyyyye!\"",
+            "!ohh [Beedle] \"Ohhhhhhhhhhhhhhh!\"",
+            "!thankyou [Beedle] \"THANK YOU!\"",
+            "!hey [Medli] \"Hey!\"",
+            "!sploosh [Salvatore] \"Sploosh!\"",
+            "!kaboom [Salvatore] \"Kaboom!\"",
+            "!dadenk [Miniblin] \"Dadenk!\""
+          ]
+        }
+
+      ]
+    },
+    {
+      "title": "Various Games",
+      "entries": [{
+          "title": "Daytona USA",
+          "commands": [
+            "!gameover [Announcer] \"GAME OVER, YEAAAAAAAAAAH!\""
+          ]
+        },
+        {
+          "title": "Donkey Kong 64",
+          "commands": [
+            "!ohbanana [Announcer] \"Ooooooooh, banana!\""
+          ]
+        },
+        {
+          "title": "Sonic Adventure",
+          "commands": [
+            "!ohno [Knuckles] \"OHNO!\""
+          ]
+        },
+        {
+          "title": "Untitled Goose Game",
+          "commands": [
+            "!honk [Goose] \"Honk!\""
+          ]
+        }
+      ]
+    },
+    {
+      "title": "TV / Movies",
+      "entries": [{
+          "title": "Eric Andre Show",
+          "commands": [
+            "!birdup [Eric] \"BIRD UP!\"",
+            "!snaildown [Hannibal] \"SNAIL DOWN!\""
+          ]
+        },
+        {
+          "title": "Gregory Horror Show",
+          "commands": [
+            "!judgement [Judgement Boy] \"JUDGEMENT! NOW!\"",
+            "!judgementboy [Judgement Boy] \"Do you know, who I am? They call me Judgement Boy. Do you know...\"",
+            "!yourchoice [Judgement Boy] \"It was your choice, you have to live with it.\""
+          ]
+        },
+        {
+          "title": "Kung Fu Panda",
+          "commands": [
+            "!monke [Oogway] \"Mmmmmmm, monke.\""
+          ]
+        },
+        {
+          "title": "Max Magician and the Legend of the Rings",
+          "commands": [
+            "!hawk [Shira the Hawk] \"AAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
+          ]
+        },
+        {
+          "title": "ReBoot",
+          "commands": [
+            "!what [Offscreen Chef] \"WHAT?!\""
+          ]
+        }
+      ]
+    }
+  ]
+}

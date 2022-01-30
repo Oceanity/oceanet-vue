@@ -1,4 +1,4 @@
-# oceanity-site
+# oceanet-spa
 
 ## Project setup
 ```
