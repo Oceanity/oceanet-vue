@@ -24,14 +24,13 @@ export default {};
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 200%;
+  width: 100vw;
+  height: 200vh;
 }
 #bubbles2,
 #bubbles3 {
   z-index: 2;
   opacity: 0.15;
-  filter: blur(2px);
 }
 #bubbles2 {
   background: url("../assets/bubbles-2.png");
@@ -43,21 +42,21 @@ export default {};
 }
 @keyframes bubbles {
   0% {
-    background-position-x: 20px;
-    background-position-y: 720px;
+    left: 20px;
+    top: 0;
   }
   33% {
-    background-position-x: 30px;
+    left: 30px;
   }
   50% {
-    background-position-x: 20px;
+    left: 20px;
   }
   66% {
-    background-position-x: 0px;
+    left: 0px;
   }
   100% {
-    background-position-x: 20px;
-    background-position-y: 0px;
+    left: 20px;
+    top: -720px;
   }
 }
 @media screen and (min-width: 641px) {
@@ -65,7 +64,6 @@ export default {};
   #bubbles1 {
     z-index: 2;
     opacity: 0.2;
-    filter: blur(1px);
   }
   #bubbles0 {
     background: url("../assets/bubbles-0.png");
