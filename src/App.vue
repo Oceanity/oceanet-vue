@@ -7,11 +7,16 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
 import "./assets/global.scss";
 import Header from "./components/Header.vue";
 import Backdrop from "./components/Backdrop.vue";
 
-export default {
+/**
+ * App Entrypoint
+ * @displayName App
+ */
+@Options({
   setup() {},
   provide() {
     return {
@@ -24,7 +29,8 @@ export default {
     Header,
     Backdrop,
   },
-};
+})
+export default class App extends Vue {}
 
 // Animate scrollTo
 function animScrollTo(y, duration) {

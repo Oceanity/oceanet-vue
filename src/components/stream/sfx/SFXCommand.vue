@@ -6,7 +6,13 @@
 </template>
 
 <script>
-export default {
+import { Options, Vue } from "vue-class-component";
+
+/**
+ * Single SFX Command
+ * @displayName SFXCommand
+ */
+@Options({
   props: ["tag", "text"],
   data() {
     return {};
@@ -16,7 +22,8 @@ export default {
       navigator.clipboard.writeText(this.tag);
     },
   },
-};
+})
+export default class SFXCommand extends Vue {}
 </script>
 
 <style lang="scss">

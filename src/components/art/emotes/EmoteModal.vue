@@ -23,11 +23,14 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
+
 /**
  * Modal showcasing a specific Emote
  * @displayName EmoteModal
  */
-export default {
+@Options({
+  // Data
   props: ["emote"],
   data() {
     return {
@@ -36,16 +39,19 @@ export default {
       src: null,
     };
   },
+  // Functions
   methods: {
     hideModal() {
       this.$emit("hideModal");
     },
   },
+  // Lifecycle
   mounted() {
     console.log(this.emote);
     this.src = require(`../../../assets/art/emotes/${this.emote.channel}/${this.emote.name}.png`);
   },
-};
+})
+export default class EmoteModal extends Vue {}
 </script>
 
 <style lang="scss">

@@ -19,12 +19,14 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
+
 /**
  * Table of Contents for Stream Sounds
  * @displayName SFXTableOfContents
  * @property categories -- object containing categories to iterate through
  */
-export default {
+@Options({
   props: ["categories"],
   methods: {
     jumpToEntry(e, item) {
@@ -36,7 +38,8 @@ export default {
       if (!item.entries && item.isCollapsed) item.isCollapsed = false;
     },
   },
-};
+})
+export default class SFXTableOfContents extends Vue {}
 </script>
 
 <style lang="scss">

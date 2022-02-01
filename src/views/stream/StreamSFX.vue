@@ -7,11 +7,16 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
 import soundFiles from "../../json/soundCommands.json";
 import TableOfContents from "../../components/stream/sfx/SFXTableOfContents.vue";
 import Category from "../../components/stream/sfx/SFXCategory.vue";
 
-export default {
+/**
+ * Stream Sound Commands Page
+ * @displayName StreamSFX
+ */
+@Options({
   data() {
     return {
       categories: soundFiles.categories,
@@ -29,7 +34,8 @@ export default {
   mounted() {
     document.title = "Stream Sound Effects";
   },
-};
+})
+export default class StreamSFX extends Vue {}
 </script>
 
 

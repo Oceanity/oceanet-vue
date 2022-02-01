@@ -7,6 +7,10 @@
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
 
+/**
+ * Home Page
+ * @displayName Home
+ */
 @Options({
   components: {},
 })

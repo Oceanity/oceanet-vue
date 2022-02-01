@@ -15,7 +15,13 @@
 </template>
 
 <script>
-export default {
+import { Options, Vue } from "vue-class-component";
+
+/**
+ * Entry of SFX Commands
+ * @displayName SFXEntry
+ */
+@Options({
   props: ["entry"],
   inject: ["scrollToTop"],
   data() {
@@ -25,7 +31,8 @@ export default {
       isCollapsed: false,
     };
   },
-};
+})
+export default class SFXEntry extends Vue {}
 </script>
 
 <style lang="scss">

@@ -11,11 +11,12 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
 import emoteData from "../../json/emotes.json";
 import EmoteGallery from "../../components/art/emotes/EmoteGallery.vue";
 import EmoteModal from "../../components/art/emotes/EmoteModal.vue";
 
-export default {
+@Options({
   data() {
     return {
       channels: emoteData.channels,
@@ -38,7 +39,12 @@ export default {
       document.documentElement.classList.remove("no-scroll");
     },
   },
-};
+  // Events
+  mounted() {
+    document.title = "Emote Commissions";
+  },
+})
+export default class Emotes extends Vue {}
 </script>
 
 <style>

@@ -27,11 +27,14 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
+
 /**
  * Site Header
  * @displayName Header
  */
-export default {};
+@Options({})
+export default class Header extends Vue {}
 </script>
 
 <style lang="scss">

@@ -8,11 +8,14 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
+
 /**
  * Animated Site backdrop
  * @displayName Backdrop
  */
-export default {};
+@Options({})
+export default class Backdrop extends Vue {}
 </script>
 
 <style lang="scss">

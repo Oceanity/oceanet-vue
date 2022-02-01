@@ -3,7 +3,9 @@
 </template>
 
 <script>
-export default {};
+import { Options, Vue } from "vue-class-component";
+@Options({})
+export default class Art extends Vue {}
 </script>
 
 <style>

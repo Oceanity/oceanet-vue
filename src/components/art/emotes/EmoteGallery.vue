@@ -12,11 +12,13 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
+
 /**
  * Gallery of Twitch Emotes
  * @displayName EmoteGallery
  */
-export default {
+@Options({
   props: ["channelInfo"],
   data() {
     return {
@@ -31,7 +33,8 @@ export default {
       this.$emit("showModal", { channel: this.displayName, prefix: this.prefix, name: emote });
     },
   },
-};
+})
+export default class EmoteGallery extends Vue {}
 </script>
 
 <style lang="scss">
@@ -42,8 +45,30 @@ export default {
   padding: 0;
 
   li {
+    position: relative;
+    margin: 5px;
+    border-radius: 10px;
     padding: 5px;
     list-style-type: none;
+    z-index: 2;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #dadaff;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.1s linear;
+    }
+
+    &:hover:after {
+      opacity: 0.5;
+    }
   }
 }
 </style>

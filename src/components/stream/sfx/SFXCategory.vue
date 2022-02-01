@@ -9,10 +9,15 @@
 </template>
 
 <script>
+import { Options, Vue } from "vue-class-component";
 import SFXEntry from "./SFXEntry.vue";
 import SFXCommand from "./SFXCommand.vue";
 
-export default {
+/**
+ * Category containing SFX entries
+ * @displayName SFXCategory
+ */
+@Options({
   props: ["category"],
   components: {
     SFXEntry,
@@ -31,7 +36,8 @@ export default {
       return [tag, split.join(" ").replace(/(\[[^\]]+\])/gi, "<span>$1</span>")];
     },
   },
-};
+})
+export default class SFXCategory extends Vue {}
 </script>
 
 <style lang="scss">
