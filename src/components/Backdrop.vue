@@ -8,6 +8,10 @@
 </template>
 
 <script>
+/**
+ * Animated Site backdrop
+ * @displayName Backdrop
+ */
 export default {};
 </script>
 

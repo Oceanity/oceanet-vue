@@ -27,6 +27,10 @@
 </template>
 
 <script>
+/**
+ * Site Header
+ * @displayName Header
+ */
 export default {};
 </script>
 

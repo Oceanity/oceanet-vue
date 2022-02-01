@@ -53,19 +53,4 @@ export default {
   line-height: 30px;
   word-break: break-word;
 }
-#sound-commands pre {
-  display: inline-block;
-  margin: 0 10px 0 0;
-  padding: 4px;
-  font-family: "Consolas", serif;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0;
-  color: aqua;
-  background: rgba(0, 0, 50, 0.7);
-  cursor: pointer;
-}
-#sound-commands pre:hover {
-  background: rgba(50, 50, 100, 0.7);
-}
 </style>

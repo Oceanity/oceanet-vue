@@ -19,6 +19,11 @@
 </template>
 
 <script>
+/**
+ * Table of Contents for Stream Sounds
+ * @displayName SFXTableOfContents
+ * @property categories -- object containing categories to iterate through
+ */
 export default {
   props: ["categories"],
   methods: {
@@ -64,11 +69,6 @@ export default {
       margin-left: 20px;
       list-style-type: square;
       font-weight: normal;
-    }
-
-    a {
-      text-decoration: none;
-      color: #e3ebae;
     }
   }
 }
