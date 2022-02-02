@@ -21,6 +21,9 @@
             </li>
           </ul>
         </li>
+        <li>
+          <router-link :to="{ name: 'MMRs' }">MMRs</router-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -86,6 +89,9 @@ header {
           a {
             color: #005;
             text-shadow: none;
+          }
+          a:hover {
+            color: #005;
           }
         }
         &:hover {

@@ -29,6 +29,11 @@ import Backdrop from "./components/Backdrop.vue";
     Header,
     Backdrop,
   },
+  watch: {
+    $route(to, from) {
+      document.title = to.meta.title || "Oceanity";
+    },
+  },
 })
 export default class App extends Vue {}
 

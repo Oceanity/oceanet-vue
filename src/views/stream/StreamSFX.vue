@@ -1,6 +1,9 @@
 <template>
   <div id="sound-commands">
-    <h1>Stream Sound Commands</h1>
+    <div class="box padded">
+      <h1>Stream Sound Commands</h1>
+      <p>Below are sound effects that can be used on my stream by subscribers and via the "Play SFX" channel point redeem</p>
+    </div>
     <TableOfContents :categories="categories" />
     <Category v-for="category in categories" :key="category" :category="category" />
   </div>
@@ -30,9 +33,6 @@ import Category from "../../components/stream/sfx/SFXCategory.vue";
     toggleEntry(entry) {
       entry.isCollapsed = !entry.isCollapsed;
     },
-  },
-  mounted() {
-    document.title = "Stream Sound Effects";
   },
 })
 export default class StreamSFX extends Vue {}

@@ -39,10 +39,6 @@ import EmoteModal from "../../components/art/emotes/EmoteModal.vue";
       document.documentElement.classList.remove("no-scroll");
     },
   },
-  // Events
-  mounted() {
-    document.title = "Emote Commissions";
-  },
 })
 export default class Emotes extends Vue {}
 </script>

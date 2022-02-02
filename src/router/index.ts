@@ -1,41 +1,71 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import Home from '../views/Home.vue'
-import Stream from '../views/stream/Stream.vue'
-import StreamSFX from '../views/stream/StreamSFX.vue'
-import Art from '../views/art/Art.vue'
-import Emotes from '../views/art/Emotes.vue'
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import Home from "../views/Home.vue";
+import Stream from "../views/stream/Stream.vue";
+import StreamSFX from "../views/stream/StreamSFX.vue";
+import Art from "../views/art/Art.vue";
+import Emotes from "../views/art/Emotes.vue";
+import MMRs from "../views/MMRs.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
+    meta: {
+      title: "Home - Oceanity",
+      metaTags: [
+        {
+          name: "description",
+          content: "Oceanity's site containing her streaming, art and music work.",
+        },
+      ],
+    },
   },
   {
-    path: '/stream',
-    name: 'Stream',
-    component: Stream
+    path: "/stream",
+    name: "Stream",
+    component: Stream,
+    meta: {
+      title: "Stream - Oceanity",
+    },
   },
   {
-    path: '/stream/sounds',
-    name: 'StreamSFX',
-    component: StreamSFX
+    path: "/stream/sounds",
+    name: "StreamSFX",
+    component: StreamSFX,
+    meta: {
+      title: "Stream Sound Commands - Oceanity",
+    },
   },
   {
-    path: '/art',
-    name: 'Art',
-    component: Art
+    path: "/art",
+    name: "Art",
+    component: Art,
+    meta: {
+      title: "Art - Oceanity",
+    },
   },
   {
-    path: '/emotes',
-    name: 'Emotes',
-    component: Emotes
+    path: "/art/emotes",
+    name: "Emotes",
+    component: Emotes,
+    meta: {
+      title: "Emote Commissions - Oceanity",
+    },
   },
-]
+  {
+    path: "/mmrs",
+    name: "MMRs",
+    component: MMRs,
+    meta: {
+      title: "MMR Music - Oceanity",
+    },
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

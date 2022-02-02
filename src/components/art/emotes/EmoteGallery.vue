@@ -52,6 +52,7 @@ export default class EmoteGallery extends Vue {}
     list-style-type: none;
     z-index: 2;
     overflow: hidden;
+    text-align: center;
 
     &:after {
       content: "";
