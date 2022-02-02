@@ -16,6 +16,10 @@ import emoteData from "../../json/emotes.json";
 import EmoteGallery from "../../components/art/emotes/EmoteGallery.vue";
 import EmoteModal from "../../components/art/emotes/EmoteModal.vue";
 
+/**
+ * Emote Commissions Page
+ * @displayName Emotes
+ */
 @Options({
   data() {
     return {

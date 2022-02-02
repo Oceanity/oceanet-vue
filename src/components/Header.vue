@@ -3,13 +3,17 @@
     <router-link to="/">
       <img src="../assets/logo.svg" alt="Oceanity Logo" class="logo" />
     </router-link>
-    <nav>
+    <HamburgerButton class="mobile-nav-button" @toggleMenu="toggleMenu" />
+    <nav v-show="showMenu">
       <ul>
         <li>
           <router-link :to="{ name: 'Stream' }">Stream</router-link>
           <ul>
             <li>
               <router-link :to="{ name: 'StreamSFX' }">Sound Commands</router-link>
+            </li>
+            <li>
+              <router-link :to="{ name: 'Discord' }">Discord</router-link>
             </li>
           </ul>
         </li>
@@ -31,12 +35,27 @@
 
 <script>
 import { Options, Vue } from "vue-class-component";
+import HamburgerButton from "../components/ui/HamburgerButton.vue";
 
 /**
  * Site Header
  * @displayName Header
  */
-@Options({})
+@Options({
+  data() {
+    return {
+      showMenu: false,
+    };
+  },
+  components: {
+    HamburgerButton,
+  },
+  methods: {
+    toggleMenu(e) {
+      this.showMenu = e;
+    },
+  },
+})
 export default class Header extends Vue {}
 </script>
 
@@ -57,10 +76,36 @@ header {
     max-width: 75vw;
     transition: width 0.1s linear, padding 0.1s linear;
   }
+
+  .mobile-nav-button {
+    display: none;
+
+    @media screen and (max-width: 640px) {
+      display: flex;
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      padding: 0 5px;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+
   nav {
     display: flex;
     flex: 1;
     vertical-align: middle;
+    user-select: none;
+
+    @media screen and (min-width: 641px) {
+      display: flex !important;
+    }
 
     li,
     a {
@@ -81,6 +126,8 @@ header {
 
         ul {
           display: none;
+          flex-direction: column;
+          white-space: nowrap;
           position: absolute;
           top: 100%;
           left: 0;
@@ -116,14 +163,31 @@ header {
 }
 @media screen and (max-width: 640px) {
   header {
+    justify-content: space-between;
+    vertical-align: middle;
     .logo {
       padding: 10px;
       width: 160px;
     }
     nav {
-      display: none;
       position: absolute;
       top: 100%;
+      width: 100%;
+      background: rgba(0, 0, 50, 0.8);
+
+      ul {
+        flex-direction: column;
+        flex: 1;
+        li {
+          ul {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 0;
+            background: rgba(255, 255, 255, 0.7);
+          }
+        }
+      }
     }
   }
 }

@@ -6,7 +6,7 @@
   <div class="mmr-category box" v-for="(source, name) in sources" :key="name">
     <h3>{{ name }}</h3>
     <ul>
-      <li v-for="entry in source" :key="entry.slug">
+      <li v-for="entry in source" :key="entry.slug" :class="{ playing: currentTrack === entry.slug }">
         <PlayPauseButton :playOn="currentTrack != entry.slug || state !== 1" @play="playAudio(entry, name)" @pause="pauseAudio(entry)" />
         <DownloadButton :href="`${root}mmrs/${entry.slug}.mmrs`" />
         <h4>{{ entry.title }}</h4>
@@ -95,6 +95,7 @@ import DownloadButton from "../components/DownloadButton.vue";
       }
       this.state = 0;
       this.nowPlaying = entry;
+      this.currentTrack = null;
       this.currentTime = 0;
       this.duration = 0;
       if (callback && typeof callback === "function") {
@@ -152,7 +153,25 @@ export default class MMRs extends Vue {}
 <style lang="scss">
 .mmr-category {
   li {
+    position: relative;
     display: flex;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.5s linear;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    &.playing:before {
+      opacity: 1;
+    }
 
     h4 {
       margin: auto 0;
@@ -211,7 +230,7 @@ export default class MMRs extends Vue {}
     right: 10px;
     height: 10px;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.3);
+    background: #000;
     cursor: pointer;
 
     .progress-bar-fill {

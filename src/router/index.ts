@@ -2,6 +2,7 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Stream from "../views/stream/Stream.vue";
 import StreamSFX from "../views/stream/StreamSFX.vue";
+import Discord from "../views/Discord.vue";
 import Art from "../views/art/Art.vue";
 import Emotes from "../views/art/Emotes.vue";
 import MMRs from "../views/MMRs.vue";
@@ -27,6 +28,14 @@ const routes: Array<RouteRecordRaw> = [
     component: Stream,
     meta: {
       title: "Stream - Oceanity",
+    },
+  },
+  {
+    path: "/stream/discord",
+    name: "Discord",
+    component: Discord,
+    meta: {
+      title: "Discord - Oceanity",
     },
   },
   {

@@ -47,7 +47,6 @@ import { Options, Vue } from "vue-class-component";
   },
   // Lifecycle
   mounted() {
-    console.log(this.emote);
     this.src = require(`../../../assets/art/emotes/${this.emote.channel}/${this.emote.name}.png`);
   },
 })
