@@ -1,9 +1,9 @@
 <template>
-  <div class="commands">
-    <a :name="link" />
+  <div class="commands" ref="test">
+    <a :name="toSlug(title, prefix)" />
     <h2>{{ title }}</h2>
-    <SFXEntry v-for="entry in category.entries" :key="entry" :entry="entry">
-      <SFXCommand v-for="command in entry.commands" :key="command" :tag="formatText(command)[0]" :text="formatText(command)[1]" />
+    <SFXEntry v-for="(entry, name) in category" :key="name" :entry="entry" :prefix="prefix" :name="name">
+      <SFXCommand v-for="command in entry" :key="command" :tag="formatText(command)[0]" :text="formatText(command)[1]" />
     </SFXEntry>
   </div>
 </template>
@@ -18,15 +18,16 @@ import SFXCommand from "./SFXCommand.vue";
  * @displayName SFXCategory
  */
 @Options({
-  props: ["category"],
+  props: ["category", "name", "prefix"],
+  inject: ["toSlug"],
   components: {
     SFXEntry,
     SFXCommand,
   },
   data() {
     return {
-      title: this.category.title,
-      link: this.category.title.replace(/[^\w\d]/gi, "-"),
+      title: this.name,
+      link: this.toSlug(this.name, this.prefix),
     };
   },
   methods: {

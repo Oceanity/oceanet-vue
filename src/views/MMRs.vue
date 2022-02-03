@@ -28,7 +28,7 @@
 import { Options, Vue } from "vue-class-component";
 import mmrsJson from "../json/mmrs.json";
 import PlayPauseButton from "../components/PlayPauseButton.vue";
-import DownloadButton from "../components/DownloadButton.vue";
+import DownloadButton from "../components/ui/DownloadButton.vue";
 
 @Options({
   data() {
@@ -105,7 +105,7 @@ import DownloadButton from "../components/DownloadButton.vue";
   },
   // Lifecycle
   created() {
-    this.sources = mmrsJson.sources;
+    this.sources = mmrsJson;
 
     // Timer Update Function
     this.timerUpdate = setInterval(() => {

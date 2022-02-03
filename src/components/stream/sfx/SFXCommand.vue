@@ -57,6 +57,9 @@ export default class SFXCommand extends Vue {}
     }
   }
   .command-text {
+    margin: 0;
+    line-height: 30px;
+    word-break: break-word;
     span {
       margin-right: 2px;
       color: rgba(255, 255, 255, 0.6);

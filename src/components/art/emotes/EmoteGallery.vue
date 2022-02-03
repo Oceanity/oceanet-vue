@@ -3,7 +3,7 @@
     <h3>{{ displayName }}</h3>
     <ul class="emote-list">
       <li v-for="emote in emotes" :key="emote">
-        <a @click="showModal(emote)">
+        <a @click="showModal({ emote, displayName, prefix })">
           <img :src="require(`../../../assets/art/emotes/${displayName}/${emote}.png`)" :alt="prefix + emote" />
         </a>
       </li>
@@ -30,7 +30,7 @@ import { Options, Vue } from "vue-class-component";
   },
   methods: {
     showModal(emote) {
-      this.$emit("showModal", { channel: this.displayName, prefix: this.prefix, name: emote });
+      this.$emit("showModal", emote);
     },
   },
 })
@@ -43,6 +43,7 @@ export default class EmoteGallery extends Vue {}
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  user-select: none;
 
   li {
     position: relative;

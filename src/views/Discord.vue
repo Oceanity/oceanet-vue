@@ -34,7 +34,6 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         this.discordData = data;
-        console.log(this.discordData);
         this.members = data.members;
         this.name = data.name;
         this.count = data.presence_count;

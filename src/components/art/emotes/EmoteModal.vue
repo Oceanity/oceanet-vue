@@ -1,7 +1,7 @@
 <template>
   <div class="emote-modal" @click.self="hideModal">
     <div class="emote-pane box">
-      <h3>{{ emote.prefix + emote.name }}</h3>
+      <h3>{{ emote.prefix + emote.emote }}</h3>
       <h4>Sizes</h4>
       <div class="sizes">
         <div class="size" v-for="size in sizes" :key="size" :class="size">
@@ -14,7 +14,7 @@
           <div class="wrap">
             <span class="username">Oceanibot</span>
             <span class="dots">:</span>
-            <span class="text"><img :src="src" :alt="size" /><img :src="src" :alt="size" /> Lorem, ipsum dolor. <img :src="src" :alt="size" /><img :src="src" :alt="size" /></span>
+            <span class="text"><img :src="src" /><img :src="src" /> Lorem, ipsum dolor. <img :src="src" /><img :src="src" /></span>
           </div>
         </div>
       </div>
@@ -28,6 +28,7 @@ import { Options, Vue } from "vue-class-component";
 /**
  * Modal showcasing a specific Emote
  * @displayName EmoteModal
+ * @property emote - Emote object to dispaly in Modal
  */
 @Options({
   // Data
@@ -47,7 +48,7 @@ import { Options, Vue } from "vue-class-component";
   },
   // Lifecycle
   mounted() {
-    this.src = require(`../../../assets/art/emotes/${this.emote.channel}/${this.emote.name}.png`);
+    this.src = require(`../../../assets/art/emotes/${this.emote.displayName}/${this.emote.emote}.png`);
   },
 })
 export default class EmoteModal extends Vue {}
@@ -95,17 +96,14 @@ export default class EmoteModal extends Vue {}
 
       .x1 img {
         width: 28px;
-        height: 28px;
       }
 
       .x2 img {
         width: 56px;
-        height: 56px;
       }
 
       .x3 img {
         width: 112px;
-        height: 112px;
       }
     }
 

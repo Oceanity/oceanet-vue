@@ -1,78 +1,76 @@
 {
-  "sources": {
-    "Animal Crossing: Wild World": [{
-      "slug": "acww-the-roost-v2",
-      "title": "The Roost"
-    }],
-    "Donkey Kong Country 2: Diddy's Kong Quest": [{
-      "slug": "dkc2-stickerbush-symphony",
-      "title": "Stickerbush Symphony (Bramble Blast)"
-    }],
-    "Duck Tales": [{
-      "slug": "dt-the-moon",
-      "title": "The Moon"
-    }],
-    "EarthBound": [{
-      "slug": "eb-buy-somethin-will-ya",
-      "title": "Buy Somethin' Will Ya!"
-    }, {
-      "slug": "eb-twoson",
-      "title": "Twoson"
-    }, {
-      "slug": "fanfare-eb-psi-learned",
-      "title": "FANFARE: PSI Learned"
-    }],
-    "Final Fantasy 9": [{
-      "slug": "ff9-youre-not-alone",
-      "title": "You're Not Alone"
-    }],
-    "Mario Kart DS": [{
-      "slug": "mkds-airship-fortress",
-      "title": "Airship Fortress"
-    }, {
-      "slug": "mkds-waluigi-pinball",
-      "title": "Waluigi Pinball"
-    }],
-    "MOTHER (EarthBound Beginnings)": [{
-      "slug": "eb0-wisdom-of-the-world",
-      "title": "Wisdom of the World"
-    }],
-    "MOTHER 3": [{
-      "slug": "mother-3-gentle-rain",
-      "title": "Gentle Rain"
-    }, {
-      "slug": "mother-3-sorrowful-tazmily",
-      "title": "Sorrowful Tazmily"
-    }],
-    "OutRun": [{
-      "slug": "outrun-passing-breeze",
-      "title": "Passing Breeze"
-    }],
-    "Skies of Arcadia": [{
-      "slug": "soa-dungeon-cave",
-      "title": "Dungeon Cave"
-    }],
-    "Sonic Mania": [{
-      "slug": "sm-mirage-saloon-act-1s",
-      "title": "Mirage Saloon Act 1S (Skyway Octane)"
-    }],
-    "Super Ghouls 'N Ghosts": [{
-      "slug": "sgng-the-haunted-graveyard",
-      "title": "The Haunted Graveyard (Stage 1)"
-    }],
-    "Zelda: The Wand of Gamelon": [{
-      "slug": "zwog-overworld-map",
-      "title": "Overworld Map"
-    }],
-    "Miscellaneous": [{
-      "slug": "4nb-whats-up",
-      "title": "4 Non Blondes - What's Up"
-    }, {
-      "slug": "rick-astley-never-gonna-give-you-up",
-      "title": "Rick Astley - Never Gonna Give You Up"
-    }, {
-      "slug": "theme-from-rocky",
-      "title": "Theme From Rocky"
-    }]
-  }
+  "Animal Crossing: Wild World": [{
+    "slug": "acww-the-roost-v2",
+    "title": "The Roost"
+  }],
+  "Donkey Kong Country 2: Diddy's Kong Quest": [{
+    "slug": "dkc2-stickerbush-symphony",
+    "title": "Stickerbush Symphony (Bramble Blast)"
+  }],
+  "Duck Tales": [{
+    "slug": "dt-the-moon",
+    "title": "The Moon"
+  }],
+  "EarthBound": [{
+    "slug": "eb-buy-somethin-will-ya",
+    "title": "Buy Somethin' Will Ya!"
+  }, {
+    "slug": "eb-twoson",
+    "title": "Twoson"
+  }, {
+    "slug": "fanfare-eb-psi-learned",
+    "title": "FANFARE: PSI Learned"
+  }],
+  "Final Fantasy 9": [{
+    "slug": "ff9-youre-not-alone",
+    "title": "You're Not Alone"
+  }],
+  "Mario Kart DS": [{
+    "slug": "mkds-airship-fortress",
+    "title": "Airship Fortress"
+  }, {
+    "slug": "mkds-waluigi-pinball",
+    "title": "Waluigi Pinball"
+  }],
+  "MOTHER (EarthBound Beginnings)": [{
+    "slug": "eb0-wisdom-of-the-world",
+    "title": "Wisdom of the World"
+  }],
+  "MOTHER 3": [{
+    "slug": "mother-3-gentle-rain",
+    "title": "Gentle Rain"
+  }, {
+    "slug": "mother-3-sorrowful-tazmily",
+    "title": "Sorrowful Tazmily"
+  }],
+  "OutRun": [{
+    "slug": "outrun-passing-breeze",
+    "title": "Passing Breeze"
+  }],
+  "Skies of Arcadia": [{
+    "slug": "soa-dungeon-cave",
+    "title": "Dungeon Cave"
+  }],
+  "Sonic Mania": [{
+    "slug": "sm-mirage-saloon-act-1s",
+    "title": "Mirage Saloon Act 1S (Skyway Octane)"
+  }],
+  "Super Ghouls 'N Ghosts": [{
+    "slug": "sgng-the-haunted-graveyard",
+    "title": "The Haunted Graveyard (Stage 1)"
+  }],
+  "Zelda: The Wand of Gamelon": [{
+    "slug": "zwog-overworld-map",
+    "title": "Overworld Map"
+  }],
+  "Miscellaneous": [{
+    "slug": "4nb-whats-up",
+    "title": "4 Non Blondes - What's Up"
+  }, {
+    "slug": "rick-astley-never-gonna-give-you-up",
+    "title": "Rick Astley - Never Gonna Give You Up"
+  }, {
+    "slug": "theme-from-rocky",
+    "title": "Theme From Rocky"
+  }]
 }

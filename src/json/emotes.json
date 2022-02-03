@@ -1,65 +1,59 @@
 {
-  "channels": [{
-      "name": "Oceanity",
-      "prefix": "oceani18",
-      "emotes": [
-        "Berdly",
-        "Blush",
-        "Cool",
-        "Dab",
-        "Gasm",
-        "Heart",
-        "Jam",
-        "Joy",
-        "Kigu",
-        "Looker",
-        "Lurk",
-        "Pog",
-        "Shock",
-        "Snug",
-        "Victory",
-        "Wave"
-      ]
-    },
-    {
-      "name": "LokisObservatory",
-      "prefix": "lokiso4",
-      "emotes": [
-        "Berdly"
-      ]
-    },
-    {
-      "name": "AzaleaThorns",
-      "prefix": "azalea15",
-      "emotes": [
-        "Berdly"
-      ]
-    },
-    {
-      "name": "TheRealGaymerFox",
-      "prefix": "therea1775",
-      "emotes": [
-        "Foxblush",
-        "Foxjoy",
-        "Foxlol",
-        "Foxpalm",
-        "Foxprideheart",
-        "Foxshock",
-        "Foxwave"
-      ]
-    },
-    {
-      "name": "VGDadPlays",
-      "prefix": "vgdadp",
-      "emotes": [
-        "Dead",
-        "Gasp",
-        "Hi",
-        "Love",
-        "Notes",
-        "Smile",
-        "Yay"
-      ]
-    }
-  ]
+  "Oceanity": {
+    "prefix": "oceani18",
+    "emotes": [
+      "Berdly",
+      "Blush",
+      "Cool",
+      "Dab",
+      "Gasm",
+      "Heart",
+      "Jam",
+      "Joy",
+      "Kigu",
+      "Looker",
+      "Lurk",
+      "Pog",
+      "Shock",
+      "Snug",
+      "Victory",
+      "Wave"
+    ]
+  },
+  "LokisObservatory": {
+    "prefix": "lokiso4",
+    "emotes": [
+      "Berdly"
+    ]
+  },
+  "AzaleaThorns": {
+    "prefix": "azalea15",
+    "emotes": [
+      "Berdly"
+    ]
+  },
+  "TheRealGaymerFox": {
+    "prefix": "therea1775",
+    "emotes": [
+      "Foxblush",
+      "Foxjoy",
+      "Foxlol",
+      "Foxpalm",
+      "Foxprideheart",
+      "Foxshock",
+      "Foxwave"
+    ]
+  },
+  "VGDadPlays": {
+    "prefix": "vgdadp",
+    "emotes": [
+      "Dead",
+      "Gasp",
+      "Hi",
+      "Love",
+      "Notes",
+      "Smile",
+      "Yay"
+    ]
+  }
 }

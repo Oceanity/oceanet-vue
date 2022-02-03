@@ -10,7 +10,7 @@
           <router-link :to="{ name: 'Stream' }">Stream</router-link>
           <ul>
             <li>
-              <router-link :to="{ name: 'StreamSFX' }">Sound Commands</router-link>
+              <router-link :to="{ name: 'SoundCommands' }">Sound Commands</router-link>
             </li>
             <li>
               <router-link :to="{ name: 'Discord' }">Discord</router-link>

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Stream from "../views/stream/Stream.vue";
-import StreamSFX from "../views/stream/StreamSFX.vue";
+import SoundCommands from "../views/stream/SoundCommands.vue";
 import Discord from "../views/Discord.vue";
 import Art from "../views/art/Art.vue";
 import Emotes from "../views/art/Emotes.vue";
@@ -40,8 +40,8 @@ const routes: Array<RouteRecordRaw> = [
   },
   {
     path: "/stream/sounds",
-    name: "StreamSFX",
-    component: StreamSFX,
+    name: "SoundCommands",
+    component: SoundCommands,
     meta: {
       title: "Stream Sound Commands - Oceanity",
     },

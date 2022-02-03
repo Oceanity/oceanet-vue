@@ -4,16 +4,16 @@
       <h1>Stream Sound Commands</h1>
       <p>Below are sound effects that can be used on my stream by subscribers and via the "Play SFX" channel point redeem</p>
     </div>
-    <TableOfContents :categories="categories" />
-    <Category v-for="category in categories" :key="category" :category="category" />
+    <TableOfContents :obj="categories" :prefix="prefix" />
+    <SFXCategory v-for="(category, name) in categories" :key="name" :category="category" :name="name" :prefix="prefix" />
   </div>
 </template>
 
 <script>
 import { Options, Vue } from "vue-class-component";
-import soundFiles from "../../json/soundCommands.json";
-import TableOfContents from "../../components/stream/sfx/SFXTableOfContents.vue";
-import Category from "../../components/stream/sfx/SFXCategory.vue";
+import soundCommands from "../../json/soundCommands.json";
+import TableOfContents from "../../components/TableOfContents.vue";
+import SFXCategory from "../../components/stream/sfx/SFXCategory.vue";
 
 /**
  * Stream Sound Commands Page
@@ -22,12 +22,13 @@ import Category from "../../components/stream/sfx/SFXCategory.vue";
 @Options({
   data() {
     return {
-      categories: soundFiles.categories,
+      prefix: "sfx-",
+      categories: soundCommands,
     };
   },
   components: {
     TableOfContents,
-    Category,
+    SFXCategory,
   },
   methods: {
     toggleEntry(entry) {
@@ -53,10 +54,5 @@ export default class StreamSFX extends Vue {}
   a[name] {
     scroll-margin: 100px;
   }
-}
-#sound-commands .command-text {
-  margin: 0;
-  line-height: 30px;
-  word-break: break-word;
 }
 </style>

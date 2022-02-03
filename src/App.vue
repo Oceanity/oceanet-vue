@@ -3,6 +3,7 @@
   <main>
     <router-view />
   </main>
+  <!--<StreamEmbed :class="{ fullsize: currentRouteName === 'Stream' }" />-->
   <Backdrop />
 </template>
 
@@ -10,6 +11,7 @@
 import { Options, Vue } from "vue-class-component";
 import "./assets/global.scss";
 import Header from "./components/Header.vue";
+import StreamEmbed from "./components/stream/StreamEmbed.vue";
 import Backdrop from "./components/Backdrop.vue";
 
 /**
@@ -23,11 +25,23 @@ import Backdrop from "./components/Backdrop.vue";
       scrollToTop() {
         animScrollTo(0, 500);
       },
+      scrollToY(y) {
+        animScrollTo(y, 500);
+      },
+      toSlug(str, prefix) {
+        return (prefix ? prefix : "") + str.replace(/[^\w\d]/gi, "");
+      },
     };
   },
   components: {
     Header,
+    StreamEmbed,
     Backdrop,
+  },
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    },
   },
   watch: {
     $route(to, from) {
