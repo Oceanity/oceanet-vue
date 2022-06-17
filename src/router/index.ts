@@ -2,10 +2,13 @@ import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 import Home from "../views/Home.vue";
 import Stream from "../views/stream/Stream.vue";
 import SoundCommands from "../views/stream/SoundCommands.vue";
+import PNGTubers from "../views/stream/PNGTubers.vue";
 import Discord from "../views/Discord.vue";
 import Art from "../views/art/Art.vue";
 import Emotes from "../views/art/Emotes.vue";
 import MMRs from "../views/MMRs.vue";
+import Supporters from "../views/Supporters.vue";
+import Socials from "../views/Socials.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -20,6 +23,14 @@ const routes: Array<RouteRecordRaw> = [
           content: "Oceanity's site containing her streaming, art and music work.",
         },
       ],
+    },
+  },
+  {
+    path: "/socials",
+    name: "Socials",
+    component: Socials,
+    meta: {
+      title: "Socials - Oceanity",
     },
   },
   {
@@ -47,6 +58,14 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: "/stream/pngtubers",
+    name: "PNGTubers",
+    component: PNGTubers,
+    meta: {
+      title: "Stream PNGTuber CSS - Oceanity",
+    },
+  },
+  {
     path: "/art",
     name: "Art",
     component: Art,
@@ -68,6 +87,14 @@ const routes: Array<RouteRecordRaw> = [
     component: MMRs,
     meta: {
       title: "MMR Music - Oceanity",
+    },
+  },
+  {
+    path: "/supporters",
+    name: "Supporters",
+    component: Supporters,
+    meta: {
+      title: "Supporters - Oceanity",
     },
   },
 ];

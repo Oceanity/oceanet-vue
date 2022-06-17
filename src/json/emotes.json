@@ -21,12 +21,6 @@
       "Wave"
     ]
   },
-  "LokisObservatory": {
-    "prefix": "lokiso4",
-    "emotes": [
-      "Berdly"
-    ]
-  },
   "AzaleaThorns": {
     "prefix": "azalea15",
     "emotes": [
@@ -54,6 +48,7 @@
       "Love",
       "Money",
       "Notes",
+      "Rage",
       "Smile",
       "Yay"
     ]

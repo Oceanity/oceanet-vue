@@ -1,65 +1,65 @@
 {
   "Zelda": {
-    "Legend of Zelda: Animated Series, The": [
-      "!excuseme [Link] \"Well excuuuuuuuuuuuuse me, Princess!\"",
-      "!smoochingtime [Link] \"OH BOY! SMOOCHING TIME!\"",
-      "!skelescream [Skeleton] \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\""
-    ],
-    "Legend of Zelda: Faces of Evil, The": [
-      "!morshu [Morshu] \"Lamp Oil? Rope? Bombs? You want it? It's yours my friend, as long as you have enough rupees.\"",
-      "!morshu2 [Morshu] \"Sorry Link, I can't give credit. Maybe come back when you're a little mmmmmmmm richer.\"",
-      "!die [Ganon] \"DIE!\""
-    ],
-    "Legend of Zelda: Majora's Mask, The": [
-      "!yah [Postman] \"Yah.\"",
-      "!yay [Toilet Hand] \"YAY!\""
-    ],
-    "Legend of Zelda: Wand of Gamelon, The": [
-      "!good [Hectan] \"You've killllllled meeeeeeee\" [Zelda] \"GOOD!\"",
-      "!illegal [Duke Oncled] \"This is illegal, you know!\""
-    ],
-    "Legend of Zelda: Wind Waker, The": [
-      "!bye [Beedle] \"Byyyyyyyye!\"",
-      "!ohh [Beedle] \"Ohhhhhhhhhhhhhhh!\"",
-      "!thankyou [Beedle] \"THANK YOU!\"",
-      "!hey [Medli] \"Hey!\"",
-      "!sploosh [Salvatore] \"Sploosh!\"",
-      "!kaboom [Salvatore] \"Kaboom!\"",
-      "!dadenk [Miniblin] \"Dadenk!\""
-    ]
+    "Legend of Zelda: Animated Series, The": {
+      "excuseme": "{Link} Well excuuuuuuuuuuuuse me, Princess!",
+      "smoochingtime": "{Link} OH BOY! SMOOCHING TIME!",
+      "skelescream": "{Skeleton} AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "Legend of Zelda: Faces of Evil, The": {
+      "morshu": "{Morshu} Lamp Oil? Rope? Bombs? You want it? It's yours my friend, as long as you have enough rupees.",
+      "morshu2": "{Morshu} Sorry Link, I can't give credit. Maybe come back when you're a little mmmmmmmm richer.",
+      "die": "{Ganon} DIE!"
+    },
+    "Legend of Zelda: Majora's Mask, The": {
+      "yah": "{Postman} Yah.",
+      "yay": "{Toilet Hand} YAY!"
+    },
+    "Legend of Zelda: Wand of Gamelon, The": {
+      "good": "{Hectan} You've killllllled meeeeeeee {Zelda} GOOD!",
+      "illegal": "{Duke Oncled} This is illegal, you know!"
+    },
+    "Legend of Zelda: Wind Waker, The": {
+      "bye": "{Beedle} Byyyyyyyye!",
+      "ohh": "{Beedle} Ohhhhhhhhhhhhhhh!",
+      "thankyou": "{Beedle} THANK YOU!",
+      "hey": "{Medli} Hey!",
+      "sploosh": "{Salvatore} Sploosh!",
+      "kaboom": "{Salvatore} Kaboom!",
+      "dadenk": "{Miniblin} Dadenk!"
+    }
   },
   "Various Games": {
-    "Daytona USA": [
-      "!gameover [Announcer] \"GAME OVER, YEAAAAAAAAAAH!\""
-    ],
-    "Donkey Kong 64": [
-      "!ohbanana [Announcer] \"Ooooooooh, banana!\""
-    ],
-    "Sonic Adventure": [
-      "!ohno [Knuckles] \"OHNO!\""
-    ],
-    "Untitled Goose Game": [
-      "!honk [Goose] \"Honk!\""
-    ]
+    "Daytona USA": {
+      "gameover": "{Announcer} GAME OVER, YEAAAAAAAAAAH!"
+    },
+    "Donkey Kong 64": {
+      "ohbanana": "{Announcer} Ooooooooh, banana!"
+    },
+    "Sonic Adventure": {
+      "ohno": "{Knuckles} OHNO!"
+    },
+    "Untitled Goose Game": {
+      "honk": "{Goose} Honk!"
+    }
   },
   "TV / Movies": {
-    "Eric Andre Show": [
-      "!birdup [Eric] \"BIRD UP!\"",
-      "!snaildown [Hannibal] \"SNAIL DOWN!\""
-    ],
-    "Gregory Horror Show": [
-      "!judgement [Judgement Boy] \"JUDGEMENT! NOW!\"",
-      "!judgementboy [Judgement Boy] \"Do you know, who I am? They call me Judgement Boy. Do you know...\"",
-      "!yourchoice [Judgement Boy] \"It was your choice, you have to live with it.\""
-    ],
-    "Kung Fu Panda": [
-      "!monke [Oogway] \"Mmmmmmm, monke.\""
-    ],
-    "Max Magician and the Legend of the Rings": [
-      "!hawk [Shira the Hawk] \"AAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaa\""
-    ],
-    "ReBoot": [
-      "!what [Offscreen Chef] \"WHAT?!\""
-    ]
+    "Eric Andre Show": {
+      "birdup": "{Eric} BIRD UP!",
+      "snaildown": "{Hannibal} SNAIL DOWN!"
+    },
+    "Gregory Horror Show": {
+      "judgement": "{Judgement Boy} JUDGEMENT! NOW!",
+      "judgementboy": "{Judgement Boy} Do you know, who I am? They call me Judgement Boy. Do you know...",
+      "yourchoice": "{Judgement Boy} It was your choice, you have to live with it."
+    },
+    "Kung Fu Panda": {
+      "monke": "{Oogway} Mmmmmmm, monke."
+    },
+    "Max Magician and the Legend of the Rings": {
+      "hawk": "{Shira the Hawk} AAAAAAAAAAaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "ReBoot": {
+      "what": "{Offscreen Chef} WHAT?!"
+    }
   }
 }

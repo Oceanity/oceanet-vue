@@ -1,7 +1,7 @@
 <template>
   <li class="sfx-command">
-    <span class="command-tag" @click="copyCommand">{{ tag }}</span>
-    <span class="command-text" v-html="text" />
+    <span class="command-tag" @click="copyCommand">!{{ tag }}</span>
+    <span class="command-text" v-html="formatText(text)" />
   </li>
 </template>
 
@@ -19,7 +19,10 @@ import { Options, Vue } from "vue-class-component";
   },
   methods: {
     copyCommand() {
-      navigator.clipboard.writeText(this.tag);
+      navigator.clipboard.writeText(`!${this.tag}`);
+    },
+    formatText(text) {
+      return text.replace(/\{([^\}]+)\}/gi, "<span class='actor'>[$1]</span>");
     },
   },
 })
@@ -32,7 +35,8 @@ export default class SFXCommand extends Vue {}
   flex-wrap: wrap;
   padding: 4px;
   list-style-type: none;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: sans-serif;
+  font-stretch: condensed;
   font-weight: bold;
   letter-spacing: 1px;
   text-shadow: none;
@@ -60,7 +64,7 @@ export default class SFXCommand extends Vue {}
     margin: 0;
     line-height: 30px;
     word-break: break-word;
-    span {
+    .actor {
       margin-right: 2px;
       color: rgba(255, 255, 255, 0.6);
     }

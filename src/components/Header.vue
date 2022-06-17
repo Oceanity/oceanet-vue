@@ -13,6 +13,9 @@
               <router-link :to="{ name: 'SoundCommands' }">Sound Commands</router-link>
             </li>
             <li>
+              <router-link :to="{ name: 'PNGTubers' }">PNGTuber Generator</router-link>
+            </li>
+            <li>
               <router-link :to="{ name: 'Discord' }">Discord</router-link>
             </li>
           </ul>
@@ -27,6 +30,9 @@
         </li>
         <li>
           <router-link :to="{ name: 'MMRs' }">MMRs</router-link>
+        </li>
+        <li>
+          <router-link :to="{ name: 'Supporters' }">Supporters</router-link>
         </li>
       </ul>
     </nav>

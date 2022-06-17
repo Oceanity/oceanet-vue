@@ -3,20 +3,20 @@
     <h1>MMR Music</h1>
     <p>Below is music I've sequenced for Majora's Mask Randomizer.</p>
   </div>
-  <div class="mmr-category box" v-for="(source, name) in sources" :key="name">
-    <h3>{{ name }}</h3>
+  <div class="mmr-category box" v-for="(source, album) in sources" :key="album">
+    <h3>{{ album }}</h3>
     <ul>
-      <li v-for="entry in source" :key="entry.slug" :class="{ playing: currentTrack === entry.slug }">
-        <PlayPauseButton :playOn="currentTrack != entry.slug || state !== 1" @play="playAudio(entry, name)" @pause="pauseAudio(entry)" />
-        <DownloadButton :href="`${root}mmrs/${entry.slug}.mmrs`" />
-        <h4>{{ entry.title }}</h4>
+      <li v-for="(title, slug) in source" :key="slug" :class="{ playing: currentTrack === slug }">
+        <PlayPauseButton :playOn="currentTrack != slug || state !== 1" @play="playAudio({ slug, title, album })" @pause="pauseAudio()" />
+        <DownloadButton :href="`${root}mmrs/${slug}.mmrs`" />
+        <h4>{{ title }}</h4>
       </li>
     </ul>
   </div>
   <div class="now-playing box" :class="{ show: state != 0 }">
-    <a class="close" @click="stopAudio(entry, name)">x</a>
+    <a class="close" @click="stopAudio({ slug, title, album })">x</a>
     <p class="title">{{ nowPlaying ? nowPlaying.title : "" }}</p>
-    <p class="category">{{ category }}</p>
+    <p class="category">{{ nowPlaying ? nowPlaying.album : "" }}</p>
     <p>{{ formatTime(currentTime) }} / {{ formatTime(duration) }}</p>
     <div class="progress-bar" @click="seekAudio">
       <div class="progress-bar-fill" :style="{ width: (currentTime / duration) * 100 + '%' }"></div>
@@ -35,14 +35,9 @@ import DownloadButton from "../components/ui/DownloadButton.vue";
     return {
       sources: {},
       root: "https://github.com/Oceanity/Oceanitys-MMR-Music/raw/main/",
-      audioSource: null,
-      tree: null,
-      mmrs: null,
-      oggs: null,
       audio: new Audio(),
       currentTime: 0,
       duration: 0,
-      category: "",
       state: 0,
       nowPlaying: null,
       currentTrack: null,
@@ -55,24 +50,24 @@ import DownloadButton from "../components/ui/DownloadButton.vue";
   },
   // Functions
   methods: {
-    playAudio(entry, name) {
+    playAudio(entry) {
       if (this.state !== 0) {
         this.audio.pause();
         this.state = 2;
       }
       if (this.currentTrack !== entry.slug) {
-        this.stopAudio(entry, () => {
+        this.stopAudio(entry.slug, () => {
           this.audio.src = `${this.root}ogg/${entry.slug}.ogg`;
           this.audio.load();
+          this.nowPlaying = entry;
           this.currentTrack = entry.slug;
-          this.category = name;
         });
       } else {
         this.audio.play();
         this.state = 1;
       }
     },
-    pauseAudio(entry) {
+    pauseAudio() {
       if (this.state === 1) {
         this.audio.pause();
         this.state = 2;
@@ -167,7 +162,7 @@ export default class MMRs extends Vue {}
       opacity: 0;
       z-index: -1;
       transition: opacity 0.5s linear;
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(200, 255, 255, 0.5);
     }
     &.playing:before {
       opacity: 1;

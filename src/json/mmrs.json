@@ -1,76 +1,50 @@
 {
-  "Animal Crossing: Wild World": [{
-    "slug": "acww-the-roost-v2",
-    "title": "The Roost"
-  }],
-  "Donkey Kong Country 2: Diddy's Kong Quest": [{
-    "slug": "dkc2-stickerbush-symphony",
-    "title": "Stickerbush Symphony (Bramble Blast)"
-  }],
-  "Duck Tales": [{
-    "slug": "dt-the-moon",
-    "title": "The Moon"
-  }],
-  "EarthBound": [{
-    "slug": "eb-buy-somethin-will-ya",
-    "title": "Buy Somethin' Will Ya!"
-  }, {
-    "slug": "eb-twoson",
-    "title": "Twoson"
-  }, {
-    "slug": "fanfare-eb-psi-learned",
-    "title": "FANFARE: PSI Learned"
-  }],
-  "Final Fantasy 9": [{
-    "slug": "ff9-youre-not-alone",
-    "title": "You're Not Alone"
-  }],
-  "Mario Kart DS": [{
-    "slug": "mkds-airship-fortress",
-    "title": "Airship Fortress"
-  }, {
-    "slug": "mkds-waluigi-pinball",
-    "title": "Waluigi Pinball"
-  }],
-  "MOTHER (EarthBound Beginnings)": [{
-    "slug": "eb0-wisdom-of-the-world",
-    "title": "Wisdom of the World"
-  }],
-  "MOTHER 3": [{
-    "slug": "mother-3-gentle-rain",
-    "title": "Gentle Rain"
-  }, {
-    "slug": "mother-3-sorrowful-tazmily",
-    "title": "Sorrowful Tazmily"
-  }],
-  "OutRun": [{
-    "slug": "outrun-passing-breeze",
-    "title": "Passing Breeze"
-  }],
-  "Skies of Arcadia": [{
-    "slug": "soa-dungeon-cave",
-    "title": "Dungeon Cave"
-  }],
-  "Sonic Mania": [{
-    "slug": "sm-mirage-saloon-act-1s",
-    "title": "Mirage Saloon Act 1S (Skyway Octane)"
-  }],
-  "Super Ghouls 'N Ghosts": [{
-    "slug": "sgng-the-haunted-graveyard",
-    "title": "The Haunted Graveyard (Stage 1)"
-  }],
-  "Zelda: The Wand of Gamelon": [{
-    "slug": "zwog-overworld-map",
-    "title": "Overworld Map"
-  }],
-  "Miscellaneous": [{
-    "slug": "4nb-whats-up",
-    "title": "4 Non Blondes - What's Up"
-  }, {
-    "slug": "rick-astley-never-gonna-give-you-up",
-    "title": "Rick Astley - Never Gonna Give You Up"
-  }, {
-    "slug": "theme-from-rocky",
-    "title": "Theme From Rocky"
-  }]
+  "Animal Crossing: Wild World": {
+    "acww-the-roost-v2": "The Roost"
+  },
+  "Donkey Kong Country 2: Diddy's Kong Quest": {
+    "dkc2-stickerbush-symphony": "Stickerbush Symphony (Bramble Blast)"
+  },
+  "Duck Tales": {
+    "dt-the-moon": "The Moon"
+  },
+  "EarthBound": {
+    "eb-buy-somethin-will-ya": "Buy Somethin' Will Ya!",
+    "eb-twoson": "Twoson",
+    "fanfare-eb-psi-learned": "FANFARE: PSI Learned"
+  },
+  "Final Fantasy 9": {
+    "ff9-youre-not-alone": "You're Not Alone"
+  },
+  "Mario Kart DS": {
+    "mkds-airship-fortress": "Airship Fortress",
+    "mkds-waluigi-pinball": "Waluigi Pinball"
+  },
+  "MOTHER (EarthBound Beginnings)": {
+    "eb0-wisdom-of-the-world": "Wisdom of the World"
+  },
+  "MOTHER 3": {
+    "mother-3-gentle-rain": "Gentle Rain",
+    "mother-3-sorrowful-tazmily": "Sorrowful Tazmily"
+  },
+  "OutRun": {
+    "outrun-passing-breeze": "Passing Breeze"
+  },
+  "Skies of Arcadia": {
+    "soa-dungeon-cave": "Dungeon Cave"
+  },
+  "Sonic Mania": {
+    "sm-mirage-saloon-act-1s": "Mirage Saloon Act 1S (Skyway Octane)"
+  },
+  "Super Ghouls 'N Ghosts": {
+    "sgng-the-haunted-graveyard": "The Haunted Graveyard (Stage 1)"
+  },
+  "Zelda: The Wand of Gamelon": {
+    "zwog-overworld-map": "Overworld Map"
+  },
+  "Miscellaneous": {
+    "4nb-whats-up": "4 Non Blondes - What's Up",
+    "rick-astley-never-gonna-give-you-up": "Rick Astley - Never Gonna Give You Up",
+    "theme-from-rocky": "Theme From Rocky"
+  }
 }

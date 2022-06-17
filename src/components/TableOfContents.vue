@@ -2,7 +2,7 @@
   <div class="table-of-contents">
     <h3>Table of Contents</h3>
     <ul class="root">
-      <TableOfContentsNode v-for="(value, key) in obj" :key="key" :name="key" :value="value" :prefix="prefix" />
+      <TableOfContentsNode v-for="(value, key) in obj" :key="prefix + key" :name="key" :value="value" :prefix="prefix" :depth="depth" />
     </ul>
   </div>
 </template>
@@ -18,12 +18,26 @@ import TableOfContentsNode from "./TableOfContentsNode.vue";
  * @property prefix -- prefix of links
  */
 @Options({
-  props: ["obj", "prefix"],
+  // Props
+  props: {
+    depth: {
+      type: Number,
+      default: 1,
+    },
+    obj: {
+      required: true,
+    },
+    prefix: {
+      type: String,
+      default: "",
+    },
+  },
+  // Components
   components: {
     TableOfContentsNode,
   },
 })
-export default class SFXTableOfContents extends Vue {}
+export default class TableOfContents extends Vue {}
 </script>
 
 <style lang="scss">

@@ -92,6 +92,7 @@ export default class EmoteModal extends Vue {}
         flex: 0;
         justify-content: center;
         padding: 10px;
+        max-width: unset;
       }
 
       .x1 img {

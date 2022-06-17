@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import { DiscordLog } from "../../../classes/Logger";
+
 /**
  * Actively updating list of Discord members
  * @displayName DiscordMemberList
@@ -42,7 +44,7 @@ export default {
     },
     itemsPerPage: {
       type: Number,
-      default: 30,
+      default: 32,
     },
   },
   data() {
@@ -58,12 +60,9 @@ export default {
   },
   // Functions
   methods: {
-    discordLog(msg) {
-      if (msg) console.log(`%c[Discord] %c${msg}`, ["color: #404EED", "font-weight: bold"].join(";"), ["color: unset", "font-weight:unset"].join(";"));
-    },
     getMembers() {
       // todo fetch members
-      this.discordLog("Updating members list");
+      DiscordLog("Updating members list");
       fetch(this.url)
         .then((res) => res.json())
         .then((data) => {
@@ -72,7 +71,7 @@ export default {
           this.count = this.members.length;
           this.pages = Math.ceil(this.count / this.itemsPerPage);
           this.getPage(this.curPage);
-          this.discordLog(`Loaded ${this.count} (${this.pages} pages) of members`);
+          DiscordLog(`Loaded ${this.count} (${this.pages} pages) of members`);
         });
     },
     getPage(page = -1) {
@@ -98,14 +97,14 @@ export default {
   },
   // Lifecycle
   created() {
-    this.discordLog("Creating DiscordMemberList");
+    DiscordLog("Creating DiscordMemberList");
     // Get members initially
     this.getMembers();
     // Update every minute
     this.refresh = setInterval(this.getMembers, 60 * 1000);
   },
   unmounted() {
-    this.discordLog("Destroying DiscordMemberList");
+    DiscordLog("Destroying DiscordMemberList");
     // Stop Updating
     clearInterval(this.refresh);
   },
@@ -120,8 +119,10 @@ export default {
     justify-content: left;
     margin: 0;
     padding: 0;
+    user-select: none;
+
     .discord-member {
-      --status-color: white;
+      --status-color: #43b581;
       display: flex;
       list-style-type: none;
       margin: 5px 1%;
@@ -149,9 +150,6 @@ export default {
         width: 36px;
         height: 36px;
 
-        &.online {
-          --status-color: #43b581;
-        }
         &.idle {
           --status-color: #faa61a;
         }
@@ -195,7 +193,7 @@ export default {
   .discord-page-nav {
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin: 10px 0;
     padding: 0;
     user-select: none;
     li {
