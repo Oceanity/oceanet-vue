@@ -16,6 +16,9 @@
               <router-link :to="{ name: 'PNGTubers' }">PNGTuber Generator</router-link>
             </li>
             <li>
+              <router-link :to="{ name: 'Stingers' }">Stingers</router-link>
+            </li>
+            <li>
               <router-link :to="{ name: 'Discord' }">Discord</router-link>
             </li>
           </ul>

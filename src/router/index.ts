@@ -9,6 +9,7 @@ import Emotes from "../views/art/Emotes.vue";
 import MMRs from "../views/MMRs.vue";
 import Supporters from "../views/Supporters.vue";
 import Socials from "../views/Socials.vue";
+import Stingers from "@/views/stream/Stingers.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -63,6 +64,14 @@ const routes: Array<RouteRecordRaw> = [
     component: PNGTubers,
     meta: {
       title: "Stream PNGTuber CSS - Oceanity",
+    },
+  },
+  {
+    path: "/stream/stingers",
+    name: "Stingers",
+    component: Stingers,
+    meta: {
+      title: "OBS Stinger Transitions - Oceanity",
     },
   },
   {

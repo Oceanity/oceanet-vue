@@ -1,14 +1,26 @@
-module.exports = {
-  devServer: {
-    disableHostCheck: true
-  },
+const path = require("path");
 
-  chainWebpack: config => {
-    config.module
-      .rule('raw')
-      .test(/\.txt$/)
-      .use('raw-loader')
-      .loader('raw-loader')
-      .end()
-  }
+module.exports = {
+    devServer: {
+        disableHostCheck: true
+    },
+
+    chainWebpack: config => {
+        config.resolve.alias
+            .set("@a", path.join(__dirname, "src/assets"));
+
+        config.module
+            .rule('raw')
+            .test(/\.txt$/)
+            .use('raw-loader')
+            .loader('raw-loader')
+            .end()
+
+        config.module
+            .rule("zip")
+            .test(/\.zip$/)
+            .use("file")
+            .loader("file-loader")
+            .end()
+    }
 }
