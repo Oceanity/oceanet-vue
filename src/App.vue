@@ -9,10 +9,11 @@
 
 <script>
 import { Options, Vue } from "vue-class-component";
-import "./assets/global.scss";
-import Header from "./components/Header.vue";
-import StreamEmbed from "./components/stream/StreamEmbed.vue";
-import Backdrop from "./components/Backdrop.vue";
+import "@a/global.scss";
+import Lightbox from "@c/Lightbox.vue";
+import Header from "@c/Header.vue";
+import StreamEmbed from "@c/stream/StreamEmbed.vue";
+import Backdrop from "@c/Backdrop.vue";
 
 /**
  * App Entrypoint
@@ -34,6 +35,7 @@ import Backdrop from "./components/Backdrop.vue";
     };
   },
   components: {
+    Lightbox,
     Header,
     StreamEmbed,
     Backdrop,

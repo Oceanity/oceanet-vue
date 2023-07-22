@@ -7,8 +7,8 @@ import Discord from "../views/Discord.vue";
 import Art from "../views/art/Art.vue";
 import Emotes from "../views/art/Emotes.vue";
 import MMRs from "../views/MMRs.vue";
-import Supporters from "../views/Supporters.vue";
 import Socials from "../views/Socials.vue";
+import SAMMIPronounsPlus from "@/views/sammi/PronounsPlus.vue";
 import Stingers from "@/views/stream/Stingers.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -75,6 +75,14 @@ const routes: Array<RouteRecordRaw> = [
     },
   },
   {
+    path: "/sammi/pronouns-plus",
+    name: "PronunsPlus",
+    component: SAMMIPronounsPlus,
+    meta: {
+      title: "SAMMI - Pronouns+",
+    },
+  },
+  {
     path: "/art",
     name: "Art",
     component: Art,
@@ -96,14 +104,6 @@ const routes: Array<RouteRecordRaw> = [
     component: MMRs,
     meta: {
       title: "MMR Music - Oceanity",
-    },
-  },
-  {
-    path: "/supporters",
-    name: "Supporters",
-    component: Supporters,
-    meta: {
-      title: "Supporters - Oceanity",
     },
   },
 ];

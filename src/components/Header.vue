@@ -35,7 +35,7 @@
           <router-link :to="{ name: 'MMRs' }">MMRs</router-link>
         </li>
         <li>
-          <router-link :to="{ name: 'Supporters' }">Supporters</router-link>
+          <router-link :to="{ name: 'PronunsPlus' }">Pronouns+</router-link>
         </li>
       </ul>
     </nav>
@@ -69,6 +69,9 @@ export default class Header extends Vue {}
 </script>
 
 <style lang="scss">
+.silentbox-is-opened header {
+  z-index: 2;
+}
 header {
   display: flex;
   flex-direction: row;

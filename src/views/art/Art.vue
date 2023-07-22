@@ -1,5 +1,8 @@
 <template>
-  <h1>Art</h1>
+    <div class="box">
+        <h1>Art</h1>
+        
+    </div>
 </template>
 
 <script>

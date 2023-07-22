@@ -26,6 +26,8 @@ export default class Backdrop extends Vue {}
   width: 100vw;
   height: 100vh;
   z-index: 0;
+  background: rgb(11, 43, 94);
+  background: linear-gradient(0deg, rgba(11, 43, 94, 1) 0%, rgba(81, 113, 204, 1) 35%, rgba(9, 168, 200, 1) 90%, rgba(174, 241, 255, 1) 100%);
 }
 .bubbles {
   position: absolute;

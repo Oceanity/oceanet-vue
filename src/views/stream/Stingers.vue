@@ -1,4 +1,8 @@
 <template>
+    <div class="box padded">
+      <h1>OBS Stinger Transitions</h1>
+      <p>Below are stinger transitions I've made for OBS. Mouse over the frame to preview the transition and click Download to get the Preview, Side-by-Side and Stacked Tracking Matte Stingers in a Zip archive.</p>
+    </div>
     <ul class="video-gallery">
         <li v-for="stinger in stingers">
             <h3>{{ stinger.title }}</h3>
@@ -14,7 +18,7 @@ import { Vue } from "vue-class-component";
 export default class extends Vue {
     stingers = [
         {
-            title: "Osprey Stinger (Concept by TheRaffe)",
+            title: "Osprey Stinger (Concept by Raffe)",
             video: require("@a/videos/osprey-preview.webm"),
             download: require("@a/downloads/osprey-stinger.zip")
         }

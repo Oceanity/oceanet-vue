@@ -7,7 +7,8 @@ module.exports = {
 
     chainWebpack: config => {
         config.resolve.alias
-            .set("@a", path.join(__dirname, "src/assets"));
+            .set("@a", path.join(__dirname, "src/assets"))
+            .set("@c", path.join(__dirname, "src/components"))
 
         config.module
             .rule('raw')

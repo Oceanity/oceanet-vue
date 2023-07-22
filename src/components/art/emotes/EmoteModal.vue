@@ -48,7 +48,7 @@ import { Options, Vue } from "vue-class-component";
   },
   // Lifecycle
   mounted() {
-    this.src = require(`../../../assets/art/emotes/${this.emote.displayName}/${this.emote.emote}.png`);
+    this.src = require(`@a/art/emotes/${this.emote.displayName}/${this.emote.emote}.png`);
   },
 })
 export default class EmoteModal extends Vue {}
