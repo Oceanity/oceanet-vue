@@ -80,7 +80,7 @@ header {
   left: 0;
   right: 0;
   z-index: 20;
-  background: rgba(0, 0, 50, 0.6);
+  background: rgb(15 38 42 / 70%);
   // Logo
   .logo {
     padding: 20px;
@@ -154,7 +154,7 @@ header {
           }
         }
         &:hover {
-          background: rgba(0, 0, 50, 0.2);
+          background: rgb(0 0 50 / 20%);
         }
         &:hover ul {
           display: flex;
@@ -185,7 +185,7 @@ header {
       position: absolute;
       top: 100%;
       width: 100%;
-      background: rgba(0, 0, 50, 0.8);
+      background: rgb(0 0 50 / 80%);
 
       ul {
         flex-direction: column;
@@ -196,7 +196,7 @@ header {
             flex-direction: column;
             position: relative;
             top: 0;
-            background: rgba(255, 255, 255, 0.7);
+            background: rgb(255 255 255 / 70%);
           }
         }
       }

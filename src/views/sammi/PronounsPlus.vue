@@ -58,10 +58,10 @@
     <h2>Usage</h2>
     <p>After you've installed Pronouns+, you will have access to 6 new <strong>Commands</strong> when editing Buttons. All commands provided are <strong>Asynchronous</strong>, meaning that you will need to put a <strong>Wait Until Variable Exists Command</strong> under them with the <strong>Variable Name</strong> you set in the <strong>Save Variable As</strong> field.</p>
     <p>This will ensure the extension has time to grab the command and return the value!</p>
-    <h4>Pronouns+: Get Twitch User Pronouns</h4>
-    <img src="@a/sammi/pronouns-plus/command-get-user-pronouns.png" alt="Pronouns+: Get Twitch User Pronouns" />
+    <h3>Pronouns+: Get Twitch User Pronouns</h3>
+    <img src="@a/sammi/pronouns-plus/command-get-user-pronouns.png" title="Pronouns+: Get Twitch User Pronouns" />
     <ul class="properties">
-      <li><strong>User Name</strong>: User Name to check, accepts user name formats <span>@UserName</span>, <span>UserName</span>, or <span>username</span></li>
+      <li><strong>User Name</strong>: User Name to check, accepts formats <span>@UserName</span>, <span>UserName</span>, or <span>username</span></li>
       <li>
         <strong>Include Cases</strong>: What Letter Cases to return
         <ul>
@@ -81,7 +81,69 @@
           <li><span>Pronoun Set</span>: randomly grabs entire set, eg. She/They = She/Her/Her/Hers/Herself or They/Them/Their/Theirs/Themself</li>
         </ul>
       </li>
-      <li><strong>Save Variable As</strong>: What Variable the command will save to</li>
+      <li><strong>Save Variable As</strong>: Variable the command will save response to</li>
+    </ul>
+    <h3>Pronouns+: Set Twitch User Pronouns</h3>
+    <img src="@a/sammi/pronouns-plus/command-set-user-pronouns.png" title="Pronouns+: Set Twitch User Pronouns" />
+    <ul class="properties">
+      <li><strong>User Name</strong>: User Name to set pronouns for, accepts formats <span>@UserName</span>, <span>UserName</span>, or <span>username</span></li>
+      <li>
+        <strong>Pronoun Set ID</strong>: ID of Pronoun Set to use, accepts formats <span>Pronoun/Pronoun</span> (eg. He/Him), <span>pronounpronoun</span> (eg. sheher)
+        <ul>
+          <li>
+            <small>The ID is usually <span>Subject/Object</span>, but if the pronoun set's Subject and Object are the same (eg. <span>It/It/Its/Its/Itself</span>) the ID will be <span>Subject/Possessive</span> instead (eg. <span>It/Its</span>)</small>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Save Variable As</strong>: Variable the command will save response to</li>
+    </ul>
+    <h3>Pronouns+: Add Pronouns To User</h3>
+    <img src="@a/sammi/pronouns-plus/command-add-pronouns-to-user.png" title="Pronouns+: Add Pronouns To User" />
+    <ul class="properties">
+      <li><strong>User Name</strong>: User Name to add pronouns to, accepts formats <span>@UserName</span>, <span>UserName</span>, or <span>username</span></li>
+      <li>
+        <strong>Pronoun Set ID</strong>: ID of Pronoun Set to add, accepts formats <span>Pronoun/Pronoun</span> (eg. He/Him), <span>pronounpronoun</span> (eg. sheher)
+        <ul>
+          <li>
+            <small>The ID is usually <span>Subject/Object</span>, but if the pronoun set's Subject and Object are the same (eg. <span>It/It/Its/Its/Itself</span>) the ID will be <span>Subject/Possessive</span> instead (eg. <span>It/Its</span>)</small>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Save Variable As</strong>: Variable the command will save response to</li>
+    </ul>
+    <h3>Pronouns+: Remove Pronouns From User</h3>
+    <img src="@a/sammi/pronouns-plus/command-remove-pronouns-from-user.png" title="Pronouns+: Remove Pronouns From User" />
+    <ul class="properties">
+      <li><strong>User Name</strong>: User Name to remove pronouns from, accepts formats <span>@UserName</span>, <span>UserName</span>, or <span>username</span></li>
+      <li>
+        <strong>Pronoun Set ID</strong>: ID of Pronoun Set to add, accepts formats <span>Pronoun/Pronoun</span> (eg. He/Him), <span>pronounpronoun</span> (eg. sheher)
+        <ul>
+          <li>
+            <small>The ID is usually <span>Subject/Object</span>, but if the pronoun set's Subject and Object are the same (eg. <span>It/It/Its/Its/Itself</span>) the ID will be <span>Subject/Possessive</span> instead (eg. <span>It/Its</span>)</small>
+          </li>
+        </ul>
+      </li>
+      <li><strong>Save Variable As</strong>: Variable the command will save response to</li>
+    </ul>
+    <h3>Pronouns+: Create Pronoun Set</h3>
+    <img src="@a/sammi/pronouns-plus/command-create-pronoun-set.png" title="Pronouns+: Create Pronoun Set" />
+    <ul class="properties">
+      <li><strong>Subject</strong>: Subject of Pronoun Set, eg. <span>he</span>, <span>she</span>, <span>they</span></li>
+      <li><strong>Object</strong>: Object of Pronoun Set, eg. <span>him</span>, <span>her</span>, <span>them</span></li>
+      <li><strong>Possessive</strong>: Possessive of Pronoun Set, eg. <span>his</span>, <span>her</span>, <span>their</span></li>
+      <li><strong>Possessive Pronoun (Optional)</strong>: Possessive Pronoun of Pronoun Set, will be generated if not provided, eg. <span>his</span>, <span>hers</span>, <span>theirs</span></li>
+      <li><strong>Reflexive (Optional)</strong>: Reflexive of Pronoun Set, will be generated if not provided, eg. <span>himself</span>, <span>herself</span>, <span>themself</span></li>
+      <li><strong>Save Variable As</strong>: Variable the command will save response to</li>
+    </ul>
+    <h3>Pronouns+: Delete Pronoun Set</h3>
+    <img src="@a/sammi/pronouns-plus/command-delete-pronoun-set.png" title="Pronouns+: Delete Pronoun Set" />
+    <ul class="properties">
+      <li><strong>Subject</strong>: Subject of Pronoun Set, eg. <span>he</span>, <span>she</span>, <span>they</span></li>
+      <li><strong>Object</strong>: Object of Pronoun Set, eg. <span>him</span>, <span>her</span>, <span>them</span></li>
+      <li><strong>Possessive</strong>: Possessive of Pronoun Set, eg. <span>his</span>, <span>her</span>, <span>their</span></li>
+      <li><strong>Possessive Pronoun (Optional)</strong>: Possessive Pronoun of Pronoun Set, will be generated if not provided, eg. <span>his</span>, <span>hers</span>, <span>theirs</span></li>
+      <li><strong>Reflexive (Optional)</strong>: Reflexive of Pronoun Set, will be generated if not provided, eg. <span>himself</span>, <span>herself</span>, <span>themself</span></li>
+      <li><strong>Save Variable As</strong>: Variable the command will save response to</li>
     </ul>
   </div>
 </template>
@@ -134,6 +196,9 @@ export default class SAMMIPronounsPlus extends Vue {}
 #silentbox-overlay__embed {
   width: 100% !important;
 }
+h3 {
+  margin: 60px 0 20px;
+}
 .example {
   margin-left: 20px;
   font-style: italic;
@@ -141,7 +206,7 @@ export default class SAMMIPronounsPlus extends Vue {}
   color: #aaa;
 }
 .box ul.properties {
-  margin: 10px 0;
+  margin: 10px 0 0;
   padding-left: 20px;
 
   strong {

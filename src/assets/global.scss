@@ -63,6 +63,13 @@ a {
   transition: color 0.1s linear;
   cursor: pointer;
 
+  &[name] {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+  }
+
   &:hover {
     color: #fff;
 
@@ -81,10 +88,10 @@ a {
 }
 .box {
   position: relative;
-  border-radius: 10px;
+  border-radius: 6px;
   margin: 0 0 30px;
-  border-bottom: 10px solid rgba(0, 0, 50, 0.1);
-  background: rgba(0, 0, 50, 0.4);
+  border-bottom: 10px solid rgb(0 0 50 / 10%);
+  background: rgb(15 38 42 / 50%);
 
   & > h3:first-child {
     position: relative;
@@ -92,7 +99,7 @@ a {
     border-radius: 10px 10px 0 0;
     padding: 7px 10px;
     font-size: 18px;
-    background: rgba(0, 0, 50, 0.7);
+    background: rgb(0 0 50 / 70%);
   }
 
   ul {
@@ -110,13 +117,13 @@ input {
 
   font-size: 18px;
   color: #fff;
-  background: rgba(0, 0, 50, 0.3);
+  background: rgb(0 0 50 / 30%);
   transition: background 0.25s linear, border-color 0.25s linear;
 
   &:focus,
   &:active {
     outline: none;
-    background: rgba(0, 0, 50, 0.8);
+    background: rgb(0 0 50 / 80%);
   }
   &.valid {
     border: 4px solid green;
@@ -150,14 +157,14 @@ button {
   outline: 0;
   font-size: 16px;
   color: #fff;
-  background: rgba(0, 0, 50, 0.8);
+  background: rgb(0 0 50 / 80%);
   cursor: pointer;
 
   &:hover {
-    background: rgba(40, 40, 90, 0.8);
+    background: rgb(40 40 90 / 80%);
   }
   &:active {
-    background: rgba(0, 0, 20, 0.9);
+    background: rgb(0 0 20 / 90%);
   }
 }
 
